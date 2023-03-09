@@ -1,0 +1,1 @@
+export const HYPERATE_WEBSOCKET_TOKEN: string = "changeme";

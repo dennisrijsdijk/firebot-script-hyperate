@@ -1,33 +1,31 @@
-import { Firebot } from "@crowbartools/firebot-custom-scripts-types";
+import {Firebot, ScriptModules} from "@crowbartools/firebot-custom-scripts-types";
+import {definition, integration} from "./integration";
 
-interface Params {
-  message: string;
-}
+interface Params { }
 
 const script: Firebot.CustomScript<Params> = {
   getScriptManifest: () => {
     return {
-      name: "Starter Custom Script",
-      description: "A starter custom script for build",
-      author: "SomeDev",
-      version: "1.0",
+      name: "Firebot Hyperate",
+      description: "A Firebot Integration for Hyperate.",
+      author: "DennisOnTheInternet",
+      version: "1.0-rc1",
       firebotVersion: "5",
+      website: "https://www.hyperate.io/",
+      startupOnly: true
     };
   },
   getDefaultParameters: () => {
-    return {
-      message: {
-        type: "string",
-        default: "Hello World!",
-        description: "Message",
-        secondaryDescription: "Enter a message here",
-      },
-    };
+    return { };
   },
   run: (runRequest) => {
-    const { logger } = runRequest.modules;
-    logger.info(runRequest.parameters.message);
+    runRequest.modules.logger.debug("", modules);
+    modules = runRequest.modules;
+    modules.integrationManager.registerIntegration({definition, integration});
   },
 };
 
 export default script;
+
+export let modules: ScriptModules = null;
+
