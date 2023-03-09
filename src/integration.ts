@@ -30,6 +30,7 @@ class HypeRateIntegration extends EventEmitter {
         this._socket = null;
         this.reconnectAttempts = 0;
     }
+
     init() {
         registerEvents();
         loadVariables();
@@ -92,8 +93,9 @@ class HypeRateIntegration extends EventEmitter {
             return;
         }
 
-        this.emit("reconnect", definition.id);
         this.reconnectAttempts++;
+
+        setTimeout(() => this.emit("reconnect", definition.id), (Math.pow(3, this.reconnectAttempts) - 1) * 1000);
     }
 
     disconnect() {
