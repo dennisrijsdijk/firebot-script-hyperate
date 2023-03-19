@@ -63,7 +63,7 @@ class HypeRateIntegration extends EventEmitter {
                 payload: {},
                 ref: 0
             }));
-            this._heartbeat = setInterval(sendHeartbeat, 29000, this._socket);
+            this._heartbeat = setInterval(sendHeartbeat, 9000, this._socket);
             this.connected = true;
             this.reconnectAttempts = 0
             this.emit("connected", definition.id);
