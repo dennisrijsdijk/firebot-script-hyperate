@@ -9,7 +9,7 @@ const script: Firebot.CustomScript<Params> = {
       name: "Firebot Hyperate",
       description: "A Firebot Integration for Hyperate.",
       author: "DennisOnTheInternet",
-      version: "1.0-rc1",
+      version: "1.0",
       firebotVersion: "5",
       website: "https://www.hyperate.io/",
       startupOnly: true
@@ -18,11 +18,13 @@ const script: Firebot.CustomScript<Params> = {
   getDefaultParameters: () => {
     return { };
   },
-  run: (runRequest) => {
-    runRequest.modules.logger.debug("", modules);
+  run: async (runRequest) => {
     modules = runRequest.modules;
     modules.integrationManager.registerIntegration({definition, integration});
   },
+  stop: async() => {
+    integration.disconnect();
+  }
 };
 
 export default script;
