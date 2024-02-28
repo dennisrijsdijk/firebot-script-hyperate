@@ -98,7 +98,7 @@ class HypeRateIntegration extends EventEmitter {
     }
 
     disconnect() {
-        if (this._socket == null) {
+        if (this._socket == null || this._socket.readyState === WebSocket.CLOSED) {
             return;
         }
         this._socket.close(3000, "Purposeful Disconnect");
