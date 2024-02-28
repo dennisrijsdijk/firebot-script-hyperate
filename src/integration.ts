@@ -98,6 +98,9 @@ class HypeRateIntegration extends EventEmitter {
     }
 
     disconnect() {
+        if (this._socket == null) {
+            return;
+        }
         this._socket.close(3000, "Purposeful Disconnect");
         this.connected = false;
         clearInterval(this._heartbeat);
