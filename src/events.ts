@@ -7,7 +7,7 @@ const EVENT_SOURCE = {
     events: [
         {
             id: "heartrate",
-            name: "HypeRate Heartrate",
+            name: "Heartrate",
             description: "When HypeRate sends your heartrate.",
             manualMetadata: {
                 rate: 80
