@@ -1,7 +1,7 @@
 {
   "name": "firebot-custom-script-hyperate",
   "scriptOutputName": "hyperateScript",
-  "version": "1.0.0",
+  "version": "1.0.0-rc2",
   "description": "",
   "main": "",
   "scripts": {

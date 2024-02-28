@@ -9,7 +9,7 @@ const script: Firebot.CustomScript<Params> = {
       name: "Firebot Hyperate",
       description: "A Firebot Integration for Hyperate.",
       author: "DennisOnTheInternet",
-      version: "1.0",
+      version: "1.0.0-rc2",
       firebotVersion: "5",
       website: "https://www.hyperate.io/",
       startupOnly: true
