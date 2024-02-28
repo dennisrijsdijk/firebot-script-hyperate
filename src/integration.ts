@@ -78,9 +78,8 @@ class HypeRateIntegration extends EventEmitter {
         });
 
         this._socket.on('close', (code, reason) => {
-            this.disconnect();
-
             if (code !== 3000) {
+                this.disconnect();
                 this.reconnect();
             }
         });

@@ -22,7 +22,7 @@ const script: Firebot.CustomScript<Params> = {
     modules = runRequest.modules;
     modules.integrationManager.registerIntegration({definition, integration});
   },
-  stop: async() => {
+  stop: () => {
     integration.disconnect();
   }
 };

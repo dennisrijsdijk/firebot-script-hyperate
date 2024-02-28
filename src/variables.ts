@@ -17,7 +17,7 @@ export function loadVariables() {
 const HeartRateVariable: ReplaceVariable = {
     definition: {
         description: "HypeRate's last reported heart rate in bpm.",
-        handle: "heartRate",
+        handle: "heartrate",
         possibleDataOutput: ["number"]
     },
     evaluator(): number {
@@ -28,7 +28,7 @@ const HeartRateVariable: ReplaceVariable = {
 const LastHeartRateTime: ReplaceVariable = {
     definition: {
         description: "The time in seconds since the last heartbeat from HypeRate",
-        handle: "timeSinceLastHeartRate",
+        handle: "heartrateTime",
         possibleDataOutput: ["number"]
     },
     evaluator(): number {
