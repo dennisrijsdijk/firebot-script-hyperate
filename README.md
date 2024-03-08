@@ -4,7 +4,7 @@
 1. Download the **hyperateScript.js** file from the latest release.
 2. Install the script into your Firebot profile and set it as a Startup Script
 3. Go to Settings > Integrations > HypeRate. Enter your Device ID in the ID field and click Save. Use **internal-testing** to receive frequent testing data.
-4. The HypeRate script exposes an event `HypeRate Heartrate` and two variables `$heartRate` (in bpm) and `$timeSinceLastHeartRate` (in seconds)
+4. The HypeRate script exposes an event `Heartrate` and two variables `$heartrate` (in bpm) and `$heartrateTime` (time since last heartrate event in seconds)
 
 ### Setup (Developers)
 1. `npm install`
